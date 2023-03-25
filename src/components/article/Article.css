@@ -1,0 +1,47 @@
+form{
+   padding-left: 20%;
+   border: #fdfdfd;
+   border-radius: 5px;
+}
+.card {
+    display: inline-block;
+    background-color: white;
+    border: 2px solid;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.ser{
+    width: 10px;
+    height: 10px;
+}
+.container .prix{
+    background-color: black;
+    color: #fdfdfd;
+
+}
+.card img{
+   padding-left: 50%;
+   padding-right: 50%;
+   height: 100px;
+   width: 100px;
+}
+.produit{
+    font-family: 'Courier New', Courier, monospace;
+    color: rebeccapurple;
+    font-size: larger;
+    font-style: italic;
+    text-align: center;
+}
+form input{
+    width: 800px;
+    height: 30px;
+}
+form button{
+    height: 34px;
+    width: 30px;
+    background-color: rgb(255, 247, 0);
+    border: #fdfdfd;
+}
