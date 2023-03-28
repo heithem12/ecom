@@ -1,7 +1,20 @@
 import React, { Component } from "react";
 import "./Article.css";
+import Articleprod from "./Articleprod";
+import Products from "./Products";
 
 class Article extends Component {
+  mapping(x) {
+    let com = x.map((ele) => (
+      <Articleprod
+        nom={ele.nom}
+        img={ele.image}
+        prix={ele.prix}
+        desc={ele.desc}
+      />
+    ));
+    return com;
+  }
   render() {
     return (
       <div className="container">
@@ -11,83 +24,7 @@ class Article extends Component {
             <img src="./UI_Icons_2-01-512.png" className="ser"></img>
           </button>
         </form>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            {" "}
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
-        <div className="card">
-          <div className="header">
-            <div className="produit">Hoodie</div>
-            <img src="./images.jpeg"></img>
-          </div>
-          <div className="desc">
-            jkfbsdfbdshf vddshfbdivbkjv fivfuvd sfuydbfjhbdufyuyvfds fsgdvfyd
-            svfuvdsfsdf dfhvdfds vfudsfud fdfsjdfvdsfhjdsvfgsd
-          </div>
-          <div className="prix">100dt</div>
-        </div>
+        {this.mapping(Products)}
       </div>
     );
   }
